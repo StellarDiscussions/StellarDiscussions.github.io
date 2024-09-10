@@ -5,12 +5,9 @@ import type { iconPaths } from "./IconPaths";
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: "Home", href: "/" },
-	{ label: "Blog", href: "/blog/" },
-	{ label: "Events", href: "/events/" },
-	{ label: "Offers", href: "/offers/" },
-	{ label: "Soulpreneurs", href: "/soulpreneurs/" },
-	{ label: "About", href: "/about/" },
-	{ label: "Contact", href: "/contact/" },
+	{ label: "Planets", href: "/planets/" },
+	{ label: "Extra Terrestrials", href: "/extraterrestrials/" },
+	{ label: "Support", href: "/about/" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -20,19 +17,9 @@ const iconLinks: {
 	icon: keyof typeof iconPaths;
 }[] = [
 	{
-		label: "Facebook",
-		href: "https://www.facebook.com/CHANGEME",
-		icon: "facebook-logo",
-	},
-	{
-		label: "Instagram",
-		href: "https://www.instagram.com/CHANGEME",
-		icon: "instagram-logo",
-	},
-	{
-		label: "LinkedIn",
-		href: "https://www.linkedin.com/CHANGEME",
-		icon: "linkedin-logo",
+		label: "Rumble",
+		href: "https://www.rumble.com/CHANGEME",
+		icon: "play",
 	},
 	{
 		label: "YouTube",
@@ -46,7 +33,7 @@ const iconLinks: {
 	<div class="menu-header">
 		<a href="/" class="site-title">
 			<Icon
-				icon="flower-lotus"
+				icon="globe-hemisphere-west"
 				color="var(--accent-regular)"
 				size="1.6em"
 				gradient

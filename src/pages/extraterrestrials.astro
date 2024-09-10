@@ -4,31 +4,31 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
-import EventPreview from "../components/EventPreview.astro";
 import Hero from "../components/Hero.astro";
 import Grid from "../components/Grid.astro";
+import ExtraTerrestrialsPreview from "../components/ExtraTerrestrialsPreview.astro";
 
-const projects = (await getCollection("events")).sort(
-	(a, b) => a.data.sortDate.valueOf() - b.data.sortDate.valueOf(),
+const projects = (await getCollection("extraterrestrials")).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
 ---
 
 <BaseLayout
-	title="Upcoming Events | CHANGEME"
-	description="Learn about CHANGEME most recent events"
+	title="Extra Terrestrials | CHANGEME"
+	description="Learn about beings from other worlds."
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="Upcoming Events"
-				tagline=""
+				title="Extra Terrestrials"
+				tagline="Learn about beings from other worlds."
 				align="start"
 			/>
-			<Grid variant="list">
+			<Grid variant="offset">
 				{
 					projects.map((project) => (
 						<li>
-							<EventPreview project={project} />
+							<ExtraTerrestrialsPreview project={project} />
 						</li>
 					))
 				}

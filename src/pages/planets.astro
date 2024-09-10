@@ -4,31 +4,31 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
-import BlogPreview from "../components/BlogPreview.astro";
+import PlanetsPreview from "../components/PlanetsPreview.astro";
 import Hero from "../components/Hero.astro";
 import Grid from "../components/Grid.astro";
 
-const projects = (await getCollection("blog")).sort(
+const projects = (await getCollection("planets")).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
 ---
 
 <BaseLayout
-	title="My Blog | CHANGEME"
-	description="Learn about CHANGEME most recent projects"
+	title="Planets | CHANGEME"
+	description="Hear what the spirit of the planets have to say."
 >
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Blog"
-				tagline="See my most recent blog articles."
+				title="Planets"
+				tagline="Hear what the spirit of the planets have to say."
 				align="start"
 			/>
 			<Grid variant="offset">
 				{
 					projects.map((project) => (
 						<li>
-							<BlogPreview project={project} />
+							<PlanetsPreview project={project} />
 						</li>
 					))
 				}
