@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import aboutPicImage from "/src/assets/BlueMarble.jpg";
+import universalMattersImage from "/src/assets/universalmatters-logo.jpg"
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 
@@ -45,7 +46,7 @@ import Hero from "../components/Hero.astro";
 						>
 							<span class="title"></span>
 							<Image
-								src="/src/assets/universalmatters-logo.webp"
+								src={universalMattersImage}
 								width="640"
 								height="480"
 								alt="Universal Matters Logo"
