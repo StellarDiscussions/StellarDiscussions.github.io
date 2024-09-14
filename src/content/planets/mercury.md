@@ -1,14 +1,12 @@
 ---
-title: Markdown Mystery Tour
+title: Mercury
 publishDate: 2020-03-02 00:00:00
-img: /src/assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img: /src/assets/mercury.jpg
+img_alt: The planet Mercury
 description: |
   We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Planets
 ---
 
 ## Level-two heading

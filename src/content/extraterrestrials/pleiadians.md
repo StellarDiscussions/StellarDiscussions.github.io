@@ -1,14 +1,12 @@
 ---
-title: Markdown Mystery Tour
+title: Pleiadians
 publishDate: 2020-03-02 00:00:00
-img: /src/assets/stock-1.jpg
-img_alt: Iridescent ripples of a bright blue and pink liquid
+img: /src/assets/pleiades.jpg
+img_alt: The Seven Sisters star constellation of Messier 45
 description: |
-  We designed a whodunnit-style game to introduce Markdown formatting. Suspense — suspicion — syntax!
+  The Seven Sisters star constellation of Messier 45
 tags:
-  - Design
-  - Dev
-  - User Testing
+  - Extraterrestrials
 ---
 
 ## Level-two heading

@@ -8,13 +8,13 @@ import PlanetsPreview from "../components/PlanetsPreview.astro";
 import Hero from "../components/Hero.astro";
 import Grid from "../components/Grid.astro";
 
-const projects = (await getCollection("planets")).sort(
+const planetblog = (await getCollection("planets")).sort(
 	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
 );
 ---
 
 <BaseLayout
-	title="Planets | CHANGEME"
+	title="Planets | Stellar Discussions"
 	description="Hear what the spirit of the planets have to say."
 >
 	<div class="stack gap-20">
@@ -26,7 +26,7 @@ const projects = (await getCollection("planets")).sort(
 			/>
 			<Grid variant="offset">
 				{
-					projects.map((project) => (
+					planetblog.map((project) => (
 						<li>
 							<PlanetsPreview project={project} />
 						</li>
