@@ -1,12 +1,12 @@
 ---
-title: Sol
-publishDate: 2019-12-01 00:00:00
-img: /src/assets/sun.jpg
-img_alt: The Sun
+title: Neptune
+publishDate: 2020-03-02 00:00:00
+img: /src/assets/neptune.jpg
+img_alt: The planet Neptune
 description: |
-  The star of our solar system.
+  Neptune (Roman) /Poseidon (Greek)
 tags:
-  - Star
+  - Planets
 ---
 This is a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
 

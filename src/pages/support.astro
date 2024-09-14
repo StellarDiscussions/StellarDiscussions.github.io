@@ -1,10 +1,10 @@
 ---
 import { Image } from "astro:assets";
-import aboutPicImage from "/src/assets/group-pic.png";
+import aboutPicImage from "/src/assets/BlueMarble.jpg";
 
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import ContactCTA from "../components/ContactCTA.astro";
+import SupportCTA from "../components/SupportCTA.astro";
 import Hero from "../components/Hero.astro";
 ---
 
@@ -31,35 +31,59 @@ import Hero from "../components/Hero.astro";
 				<div class="content">
 					<p>
 						This information has been made available by the generous
-						support by Carmelina at Universal Matters. If you are looking for 
-					</p>
-					<p>
-						Arcu dui vivamus arcu felis bibendum ut tristique et
-						egestas. Eget gravida cum sociis natoque penatibus. Cras
-						fermentum odio eu feugiat pretium nibh. Proin nibh nisl
-						condimentum id venenatis. Porta nibh venenatis cras sed
-						felis eget velit. Id diam vel quam elementum pulvinar
-						etiam non.
-					</p>
-					<p>
-						Ultrices tincidunt arcu non sodales neque sodales ut.
-						Sed enim ut sem viverra aliquet eget sit amet. Lacus
-						luctus accumsan tortor posuere ac ut consequat semper
-						viverra. Viverra accumsan in nisl nisi scelerisque eu
-						ultrices. In massa tempor nec feugiat nisl pretium
-						fusce.
+						support by Carmelina at Universal Matters. If you are
+						looking for spiritual guidance please take a look at her
+						website to see what she has to offer.
+						<br />
+						<a href=`https://universalmatters.global`
+							>https://universalmatters.global
+						</a>
+						<br />
+						<a
+							class="card"
+							href={`https://universalmatters.global`}
+						>
+							<span class="title"></span>
+							<Image
+								src="/src/assets/universalmatters-logo.webp"
+								width="640"
+								height="480"
+								alt="Universal Matters Logo"
+								loading="lazy"
+								decoding="async"
+							/>
+						</a>
 					</p>
 				</div>
 			</section>
 			<section>
 				<h2 class="section-title">Value 4 Value</h2>
 				<div class="content">
-					<p>Corporis voluptates tenetur laudantium.</p>
+					<p>
+						If you find it valuable, you give value back—in the form
+						of time, talent, or treasure. That’s all there is to it,
+						really.
+						<br />
+						<ul>
+							Time: Your time & attention are valuable. Spending
+							them is valuable in and of itself. Share this
+							information with anyone who would be open to it.
+						</ul>
+						<br />
+						<ul>
+							Talent: It doesn’t have to be money. Whatever your
+							skills, there are many ways to give back. If you
+							would like help produce this content by creating art
+							to share during the videos please contact us.
+						</ul>
+						<br />
+						<ul>Treasure: Donate money to us via Stripe.</ul>
+					</p>
 				</div>
 			</section>
 		</main>
 
-		<ContactCTA />
+		<SupportCTA />
 	</div>
 </BaseLayout>
 

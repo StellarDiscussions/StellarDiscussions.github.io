@@ -1,12 +1,13 @@
 ---
-title: Sol
-publishDate: 2019-12-01 00:00:00
-img: /src/assets/sun.jpg
-img_alt: The Sun
+title: Luna
+publishDate: 2020-03-02 00:00:00
+img: /src/assets/luna.jpg
+img_alt: NASA Galileo spacecraft took this image of Earth moon on December 7, 1992 on its way to explore the Jupiter system in 1995-97. The distinct bright ray crater at the bottom of the image is the Tycho impact basin.
+
 description: |
-  The star of our solar system.
+  Luna (Roman) / Mani (Norse) / Selene (Greek)
 tags:
-  - Star
+  - Planets
 ---
 This is a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
 
