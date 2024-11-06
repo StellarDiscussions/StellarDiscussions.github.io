@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
+import ArcturiansPreview from "../components/ArcturiansPreview.astro";
+
+const planetblog = (await getCollection("arcturians")).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+---
+
+<BaseLayout
+	title="Arcturians | Stellar Discussions"
+	description="The people from the Arcturus System."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<div class="wrapper stack gap-2">
+				<a class="back-link" href="/extraterrestrials/"
+					><Icon icon="arrow-left" />Extra Terrestrials</a
+				>
+			<Hero
+				title="Arcturians"
+				tagline="The people from the Arcturus System"
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					planetblog.map((project) => (
+						<li>
+							<ArcturiansPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>

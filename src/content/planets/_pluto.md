@@ -4,7 +4,7 @@ publishDate: 2020-03-02 00:00:00
 img: /src/assets/pluto.jpg
 img_alt: The dwarf planet Pluto
 description: |
-  Pulto (Roman) / Hades (Greek)
+  Pluto (Roman) / Hades (Greek)
 tags:
   - Planets
 ---

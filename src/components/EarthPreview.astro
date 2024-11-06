@@ -1,41 +1,32 @@
 ---
+import type { CollectionEntry } from "astro:content";
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 
-import BaseLayout from "../layouts/BaseLayout.astro";
+interface Props {
+	project: CollectionEntry<"blog">;
+}
 
-import ContactCTA from "../components/ContactCTA.astro";
-import Hero from "../components/Hero.astro";
-import Grid from "../components/Grid.astro";
+const { data, slug } = Astro.props.project;
+const images = import.meta.glob<{ default: ImageMetadata }>(
+	"/src/assets/*.{jpeg,jpg,png,gif}",
+);
 
+if (!images[data.img])
+	throw new Error(
+		`"${data.img}" does not exist in glob: "src/assets/*.{jpeg,jpg,png,gif}"`,
+	);
 ---
 
-<BaseLayout
-	title="Extra Terrestrials | Stellar Discussions"
-	description="Learn about beings from other worlds."
->
-	<div class="stack gap-20">
-		<main class="wrapper stack gap-8">
-			<Hero
-				title="Extra Terrestrials"
-				tagline="Learn about beings from other worlds."
-				align="start"
-			/>
-			<Grid variant="small">
-				{
-					<a class="card" href={`/arcturians/`}>
-						<span class="title">{'Arcturians'}</span>
-						<img
-							src={'/src/assets/arcturus.jpg'}
-							alt={"The bright orange star Arcturus"}
-							loading="lazy"
-							decoding="async"
-						/>
-					</a>
-				}
-			</Grid>
-		</main>
-		<ContactCTA />
-	</div>
-</BaseLayout>
+<a class="card" href={`/earth/${slug}`}>
+	<span class="title">{data.title}</span>
+	<Image
+		src={images[data.img]()}
+		alt={data.img_alt || ""}
+		loading="lazy"
+		decoding="async"
+	/>
+</a>
 
 <style>
 	.card {
