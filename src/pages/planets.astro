@@ -2,14 +2,20 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 import ContactCTA from "../components/ContactCTA.astro";
-import PlanetsPreview from "../components/PlanetsPreview.astro";
 import Hero from "../components/Hero.astro";
 import Grid from "../components/Grid.astro";
 import { Image } from "astro:assets";
 
-const images = import.meta.glob<{ default: ImageMetadata }>(
-	"/src/assets/*.{jpeg,jpg,png,gif}",
-);
+
+import imgEarth from '../assets/BlueMarble.jpg';
+import imgJupiter from '../assets/jupiter.jpg';
+import imgLuna from '../assets/luna.jpg';
+import imgMercury from '../assets/mercury.jpg';
+import imgNeptune from '../assets/neptune.jpg';
+import imgSaturn from '../assets/saturn.jpg';
+import imgSol from '../assets/sun.jpg';
+import imgUranus from "../assets/uranus.jpg";
+import imgVenus from '../assets/venus.jpg';
 
 ---
 
@@ -28,8 +34,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 				{
 					<a class="card" href={`/earth/`}>
 						<span class="title">{'Earth'}</span>
-						<img
-							src={'/src/assets/earth.jpg'}
+						<Image
+							src={imgEarth}
 							alt={"The planet Earth"}
 							loading="lazy"
 							decoding="async"
@@ -38,8 +44,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 					
 					<a class="card" href={`/jupiter/`}>
 						<span class="title">{'Jupiter'}</span>
-						<img
-							src={'/src/assets/jupiter.jpg'}
+						<Image
+							src={imgJupiter}
 							alt={"The planet Jupiter"}
 							loading="lazy"
 							decoding="async"
@@ -48,8 +54,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 					<a class="card" href={`/luna/`}>
 						<span class="title">{'Luna'}</span>
-						<img
-							src={'/src/assets/luna.jpg'}
+						<Image
+							src={imgLuna}
 							alt={"Earth's Moon Luna"}
 							loading="lazy"
 							decoding="async"
@@ -58,8 +64,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 					<a class="card" href={`/mercury/`}>
 						<span class="title">{'Mercury'}</span>
-						<img
-							src={'/src/assets/mercury.jpg'}
+						<Image
+							src={imgMercury}
 							alt={"The planet Mercury"}
 							loading="lazy"
 							decoding="async"
@@ -68,8 +74,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 					<a class="card" href={`/neptune/`}>
 						<span class="title">{'Neptune'}</span>
-						<img
-							src={'/src/assets/neptune.jpg'}
+						<Image
+							src={imgNeptune}
 							alt={"The planet Neptune"}
 							loading="lazy"
 							decoding="async"
@@ -78,8 +84,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 					<a class="card" href={`/saturn/`}>
 						<span class="title">{'Saturn'}</span>
-						<img
-							src={'/src/assets/saturn.jpg'}
+						<Image
+							src={imgSaturn}
 							alt={"The planet Saturn"}
 							loading="lazy"
 							decoding="async"
@@ -88,8 +94,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 					<a class="card" href={`/sol/`}>
 						<span class="title">{'Sol'}</span>
-						<img
-							src={'/src/assets/sun.jpg'}
+						<Image
+							src={imgSol}
 							alt={"The Sun"}
 							loading="lazy"
 							decoding="async"
@@ -98,8 +104,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 					
 					<a class="card" href={`/uranus/`}>
 						<span class="title">{'Uranus'}</span>
-						<img
-							src={'/src/assets/uranus.jpg'}
+						<Image
+							src={imgUranus}
 							alt={"The planet Uranus"}
 							loading="lazy"
 							decoding="async"
@@ -108,8 +114,8 @@ const images = import.meta.glob<{ default: ImageMetadata }>(
 
 					<a class="card" href={`/venus/`}>
 						<span class="title">{'Venus'}</span>
-						<img
-							src={'/src/assets/venus.jpg'}
+						<Image
+							src={imgVenus}
 							alt={"The planet Venus"}
 							loading="lazy"
 							decoding="async"
