@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Icon from "../components/Icon.astro";
+import ContactCTA from "../components/ContactCTA.astro";
+import MercuryPreview from "../components/MercuryPreview.astro";
+import Hero from "../components/Hero.astro";
+import Grid from "../components/Grid.astro";
+
+const planetblog = (await getCollection("mercury")).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+---
+
+<BaseLayout
+	title="Mercury | Stellar Discussions"
+	description="Hear what the spirit of the planets have to say."
+>
+	<div class="stack gap-20">
+		<main class="wrapper stack gap-8">
+			<div class="wrapper stack gap-2">
+				<a class="back-link" href="/planets/"
+					><Icon icon="arrow-left" />Planets</a
+				>
+			<Hero
+				title="Mercury"
+				tagline="Hear what the spirit of the planets have to say."
+				align="start"
+			/>
+			<Grid variant="offset">
+				{
+					planetblog.map((project) => (
+						<li>
+							<MercuryPreview project={project} />
+						</li>
+					))
+				}
+			</Grid>
+		</main>
+		<ContactCTA />
+	</div>
+</BaseLayout>
