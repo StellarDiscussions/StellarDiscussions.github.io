@@ -1,7 +1,8 @@
 ---
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
-import profilePicImage from "/src/assets/sol-system.jpg";
+import profilePicImage from "/src/assets/StellarDiscussions.png";
+import planetsImage from "/src/assets/sol-system.jpg";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -31,8 +32,8 @@ import SupportCTA from "../components/SupportCTA.astro";
 				/>
 
 				<Image
-					alt="Planets in the Sol System"
-					width="480"
+					alt="Stellar Discussions Grid"
+					width="620"
 					height="620"
 					src={profilePicImage}
 				/>
@@ -48,8 +49,6 @@ import SupportCTA from "../components/SupportCTA.astro";
 					<p>Hear what the planets have to say.</p>
 				</header>
 
-
-
 				<div class="cta">
 					<CallToAction href="/planets/">
 						View All
@@ -57,14 +56,13 @@ import SupportCTA from "../components/SupportCTA.astro";
 					</CallToAction>
 				</div>
 			</section>
+			<Image alt="Solar System" width="620" src={planetsImage} />
 
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Messages from Extraterrestrials</h3>
 					<p>Hear what people not from this world have to say.</p>
 				</header>
-
-
 
 				<div class="cta">
 					<CallToAction href="/extraterrestrials/">
@@ -77,9 +75,7 @@ import SupportCTA from "../components/SupportCTA.astro";
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Wisdom from the Stars</h3>
-					<p>
-						The heavens look kindly upon us.
-					</p>
+					<p>The heavens look kindly upon us.</p>
 				</header>
 
 				<div class="gallery">
@@ -134,7 +130,7 @@ import SupportCTA from "../components/SupportCTA.astro";
 	}
 
 	.hero img {
-		aspect-ratio: 5 / 4;
+		aspect-ratio: 1 / 1;
 		object-fit: cover;
 		object-position: top;
 		border-radius: 1.5rem;
@@ -156,7 +152,7 @@ import SupportCTA from "../components/SupportCTA.astro";
 		}
 
 		.hero img {
-			aspect-ratio: 3 / 4;
+			aspect-ratio: 1 / 1;
 			border-radius: 4.5rem;
 			object-fit: cover;
 		}
