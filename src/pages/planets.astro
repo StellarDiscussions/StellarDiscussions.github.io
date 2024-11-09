@@ -16,6 +16,7 @@ import imgSaturn from '../assets/saturn.jpg';
 import imgSol from '../assets/sun.jpg';
 import imgUranus from "../assets/uranus.jpg";
 import imgVenus from '../assets/venus.jpg';
+import imgPleiades from '../assets/pleiades.jpg'
 
 ---
 
@@ -117,6 +118,16 @@ import imgVenus from '../assets/venus.jpg';
 						<Image
 							src={imgVenus}
 							alt={"The planet Venus"}
+							loading="lazy"
+							decoding="async"
+						/>
+					</a>
+
+					<a class="card" href={`/pleiades/`}>
+						<span class="title">{'Pleiades'}</span>
+						<Image
+							src={imgPleiades}
+							alt={"The Seven Sisters Star Cluster"}
 							loading="lazy"
 							decoding="async"
 						/>
