@@ -13,7 +13,7 @@ tags:
 
 <iframe width="720" height="480" src="https://www.youtube-nocookie.com/embed/hQS7Y-8W5CY?si=xEgFewsgULGu_-4X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-Since 2013, one of my favorite abilities is communicating with Mother Gaia. Mother Gaia, Earth, is the first planet I was able to channel & have an open dialogue with. Recently she requested we co-create a grounding ceremony to uplift humanity and help us stay grounded to her. Whenever you want to get grounded or feel overwhelmed by life and want to be centered listen to this grounding ceremony! This is an open invitation by Mother Gaia and me, enjoy!!!
+Since 2013, one of my favorite abilities is communicating with Mother Gaia. Mother Gaia, Earth, is the first planet I was able to channel & have an open dialogue with. Recently she requested we co-create a grounding ceremony to uplift humanity and help us stay grounded to her. Whenever you feel anxious or overwhelmed by life and want to be calmed & get centered listen to this grounding ceremony! It was created for all, but is focused on people that don’t have much time to spare. This is an open invitation from Mother Gaia and me to pause, reset & go!!!
 
 ## Transcript
 
