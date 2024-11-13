@@ -3,6 +3,8 @@ import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import profilePicImage from "/src/assets/StellarDiscussions.png";
 import planetsImage from "/src/assets/sol-system.jpg";
+import EarthPreview from "../components/EarthPreview.astro";
+import ArcturiansPreview from "../components/ArcturiansPreview.astro";
 
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
@@ -17,6 +19,14 @@ import Icon from "../components/Icon.astro";
 import ContactCTA from "../components/ContactCTA.astro";
 import SupportCTA from "../components/SupportCTA.astro";
 
+const earthblog = (await getCollection("earth")).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
+const arcturiansblog = (await getCollection("arcturians")).sort(
+	(a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
+);
+
 // Full Astro Component Syntax:
 // https://docs.astro.build/basics/astro-components/
 ---
@@ -27,7 +37,7 @@ import SupportCTA from "../components/SupportCTA.astro";
 			<header class="hero">
 				<Hero
 					title="The Cosmos are Alive"
-					tagline="It is time for humans to rediscover how to speak with the planets and stars. Carmelina is a multidimensional traveler who’s had a passion for channeling planets, stars and extraterrestrial beings since 2013. The conversations Carmelina has with them are explorations of their consciousness. The messages she brings back enable us to discover an unknown part of them. Carmelina is your information bridge for other planets, stars and extraterrestrial beings. Hear what they have to say to us and gain understanding and insight. Be a part of the exploration team and submit your questions for upcoming channelings. "
+					tagline="It is time for humans to rediscover how to speak with the planets, stars, and beings from other worlds."
 					align="start"
 				/>
 
@@ -35,14 +45,41 @@ import SupportCTA from "../components/SupportCTA.astro";
 					alt="Stellar Discussions Grid"
 					width="620"
 					height="620"
+					loading="eager"
 					src={profilePicImage}
 				/>
 			</header>
 		</div>
 
-		<SupportCTA />
-
+		
 		<main class="wrapper stack gap-20 lg:gap-48">
+			<section class="gallery">
+				<h3>Carmelina the Channel</h3>
+				<p>
+					Carmelina is a multidimensional traveler who’s had a passion
+					for channeling planets, stars, and extraterrestrial beings
+					since 2013. The conversations Carmelina has with them are
+					explorations of their consciousness. The messages she brings
+					back enable us to discover an unknown part of them.
+					Carmelina is your information bridge for other planets,
+					stars and extraterrestrial beings. Hear what they have to
+					say to us and gain understanding and insight. Be a part of
+					the exploration team and submit your questions for upcoming
+					channelings.
+				</p>
+				<section class="section-header">
+					<iframe
+					width="560"
+					height="315"
+					src="https://www.youtube-nocookie.com/embed/sxCR014xsX8?si=r4ZHGGZO6p8LvF4H"
+					title="YouTube video player"
+					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+					referrerpolicy="strict-origin-when-cross-origin"
+					allowfullscreen></iframe>
+				</section>
+			</section>
+			
+			<SupportCTA />
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Messages from the Planets</h3>
@@ -54,10 +91,16 @@ import SupportCTA from "../components/SupportCTA.astro";
 						View All
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
-				</div>
+				</div>		
+				{
+					earthblog.map((project) => (
+						<li>
+							<EarthPreview project={project} />
+						</li>
+					))
+				}
 			</section>
-			<Image alt="Solar System" width="620" src={planetsImage} />
-
+			
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Messages from Extraterrestrials</h3>
@@ -70,11 +113,18 @@ import SupportCTA from "../components/SupportCTA.astro";
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
+				{
+					arcturiansblog.map((project) => (
+						<li>
+							<ArcturiansPreview project={project} />
+						</li>
+					))
+				}
 			</section>
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Wisdom from the Stars</h3>
+					<h3>Wisdom from the Cosmos</h3>
 					<p>The heavens look kindly upon us.</p>
 				</header>
 

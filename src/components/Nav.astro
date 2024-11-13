@@ -5,9 +5,9 @@ import type { iconPaths } from "./IconPaths";
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
 	{ label: "Home", href: "/" },
-	{ label: "Planets", href: "/planets/" },
-	{ label: "Extra Terrestrials", href: "/extraterrestrials/" },
-	{ label: "Support", href: "/support/" },
+	{ label: "Planets & Stars", href: "/planets/" },
+	{ label: "Extraterrestrials", href: "/extraterrestrials/" },
+	{ label: "Support Us", href: "/support/" },
 ];
 
 /** Icon links to social media — edit these with links to your profiles! */
@@ -16,11 +16,6 @@ const iconLinks: {
 	href: string;
 	icon: keyof typeof iconPaths;
 }[] = [
-	{
-		label: "Rumble",
-		href: "https://www.rumble.com/CHANGEME",
-		icon: "play",
-	},
 	{
 		label: "YouTube",
 		href: "https://www.youtube.com/@stellardiscussions",
@@ -32,12 +27,20 @@ const iconLinks: {
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Icon
-				icon="globe-hemisphere-west"
-				color="var(--accent-regular)"
-				size="1.6em"
-				gradient
-			/>
+			<svg
+				width="32"
+				height="32"
+				viewBox="0 0 8.466666 8.466666"
+				version="1.1"
+				id="svg1"
+				xml:space="preserve"
+				xmlns="http://www.w3.org/2000/svg"
+				><defs id="defs1"></defs><path
+					id="path12-1"
+					style="opacity:1;vector-effect:non-scaling-stroke;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.070011;stroke-dasharray:none;-inkscape-stroke:hairline"
+					d="m 3.9566005,0.5390773 a 3.704119,3.7049276 0 0 0 -3.427434,3.693894 3.7041665,3.704975 0 0 0 7.408333,0 3.704119,3.7049276 0 0 0 -3.980899,-3.693894 z m -0.269349,0.565618 c 0.0056,0.09175 0.03154,0.175999 0.07766,0.252859 l -1.344284,2.328808 h -0.02038 l -0.432737,-0.74983 c 0.208161,-0.380293 -0.04833,-0.666739 -0.169813,-0.740665 0.474595,-0.573831 1.146008,-0.959438 1.889546,-1.091172 z m 1.092163,0 0.100768,0.01928 v 0.542373 l -0.178427,-0.308797 c 0.04266,-0.06596 0.06857,-0.150211 0.07766,-0.252859 z m 0.629894,0.178604 c 0.540285,0.206345 1.072276,0.623671 1.409093,1.106352 h -1.195117 c -0.0613,-0.101703 -0.132602,-0.173163 -0.213976,-0.2143 z m -1.186093,0.338603 c 0.0071,1.26e-4 0.01383,1.26e-4 0.02023,0 l 0.432873,0.749831 c -0.149909,0.209244 -0.09864,0.818995 0.478539,0.829148 l 0.432872,0.750236 c -0.104569,0.212878 -0.104569,0.400892 0,0.564253 l -1.344284,2.328669 c -0.0068,-1.82e-4 -0.01346,-1.68e-4 -0.02023,1.4e-4 l -1.344285,-2.328942 c 0.10457,-0.183925 0.10457,-0.371939 0,-0.56412 z m 1.400069,1.296712 h 1.500288 c 0.151839,0.335782 0.243127,0.685834 0.273725,1.050008 h -0.862465 c -0.116195,-0.188161 -0.279155,-0.282309 -0.488794,-0.28226 l -0.432872,-0.74983 c 0.0031,-0.0054 0.0065,-0.01144 0.01012,-0.01792 z m -4.371661,0.223185 c 0.07378,0.03905 0.159675,0.05875 0.257591,0.05908 l 0.432873,0.750236 c -0.104569,0.18812 -0.104569,0.376141 0,0.564253 l -0.597627,1.035101 c -0.303037,-0.659598 -0.411736,-1.528404 -0.09284,-2.408672 z m 5.283209,1.356066 h 0.862465 c -0.161413,1.551622 -1.267646,2.636723 -2.617883,2.863388 -0.008,-0.09927 -0.03386,-0.183323 -0.07766,-0.25232 l 1.344285,-2.329074 c 0.248405,-0.02398 0.411366,-0.117996 0.488793,-0.281994 z m -4.134578,0.282267 c 0.0046,-1.75e-4 0.0114,-1.75e-4 0.02038,0 l 1.344284,2.328528 c -0.04525,0.07378 -0.07116,0.157956 -0.07766,0.252593 -0.748121,-0.129024 -1.520467,-0.549549 -2.037079,-1.281812 z"
+				></path>
+			</svg>
 			Stellar Discussions
 		</a>
 		<menu-button>
