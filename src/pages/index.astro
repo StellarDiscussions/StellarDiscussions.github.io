@@ -51,9 +51,8 @@ const arcturiansblog = (await getCollection("arcturians")).sort(
 			</header>
 		</div>
 
-		
 		<main class="wrapper stack gap-20 lg:gap-48">
-			<section class="gallery">
+			<section class="testimonial">
 				<h3>Carmelina the Channel</h3>
 				<p>
 					Carmelina is a multidimensional traveler who’s had a passion
@@ -67,8 +66,9 @@ const arcturiansblog = (await getCollection("arcturians")).sort(
 					the exploration team and submit your questions for upcoming
 					channelings.
 				</p>
-				<section class="section-header">
-					<iframe
+			</section>
+			<section class="testimonial center">
+				<iframe
 					width="560"
 					height="315"
 					src="https://www.youtube-nocookie.com/embed/sxCR014xsX8?si=r4ZHGGZO6p8LvF4H"
@@ -76,9 +76,8 @@ const arcturiansblog = (await getCollection("arcturians")).sort(
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					referrerpolicy="strict-origin-when-cross-origin"
 					allowfullscreen></iframe>
-				</section>
 			</section>
-			
+
 			<SupportCTA />
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
@@ -91,16 +90,16 @@ const arcturiansblog = (await getCollection("arcturians")).sort(
 						View All
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
-				</div>		
+				</div>
 				{
 					earthblog.map((project) => (
-						<li>
+						<ul>
 							<EarthPreview project={project} />
-						</li>
+						</ul>
 					))
 				}
 			</section>
-			
+
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Messages from Extraterrestrials</h3>
@@ -115,9 +114,9 @@ const arcturiansblog = (await getCollection("arcturians")).sort(
 				</div>
 				{
 					arcturiansblog.map((project) => (
-						<li>
+						<ul>
 							<ArcturiansPreview project={project} />
-						</li>
+						</ul>
 					))
 				}
 			</section>
@@ -175,6 +174,14 @@ const arcturiansblog = (await getCollection("arcturians")).sort(
 		gap: 2rem;
 	}
 
+	.testimonial {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 2rem;
+		font-size: var(--text-lg);
+	}
+
 	.roles {
 		display: none;
 	}
@@ -193,6 +200,23 @@ const arcturiansblog = (await getCollection("arcturians")).sort(
 			grid-template-columns: 6fr 4fr;
 			padding-inline: 2.5rem;
 			gap: 3.75rem;
+		}
+
+		.testimonial {
+			display: flex;
+			flex-direction: column;
+			align-items: start;
+			padding-inline: 2.5rem;
+			gap: 2rem;
+			font-size: var(--text-xl);
+		}
+
+		.center {
+			/*
+			display: grid;
+			grid-area: 1 / 1 / 1;
+			*/
+			align-items: center;
 		}
 
 		.roles {
